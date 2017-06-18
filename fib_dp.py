@@ -1,4 +1,5 @@
 from util import timed
+from tqdm import tqdm
 
 
 def fib(n):
@@ -19,5 +20,5 @@ if __name__ == '__main__':
 
     with timed():
         table = [None for i in range(N)]
-        for i in range(N):
-            print(fib(i))
+        for i in tqdm(range(N)):
+            fib(i)
